@@ -1,0 +1,61 @@
+/**weather.wxss**/
+page {
+overflow:hidden; /**当内容超出元素框时隐藏超出部分**/ 
+position:fixed; /**定位方式为绝对定位**/ 
+background-image:url('http://188.131.202.95/wximg/background.jpeg');
+margin: 0px;
+background-size: 100% 100%; /**背景铺满**/ }
+/**字体设置**/ 
+/**字体颜色**/
+.w{color: white;} 
+/**字体粗细**/
+.b{font-weight:normal;} 
+/**字体大小**/
+.f50{font-size: 50rpx;}
+.f40{font-size: 30rpx;}
+ /**边界线**/ .l{
+  border: 1rpx solid #fff;
+}
+/**对齐方式，中间，左，右，两端**/ 
+.center{text-align: center;margin: auto 0;} 
+.left{text-align:left;margin: auto 0; } 
+.right{text-align:right;margin: auto 0; } 
+.justify{text-align:justify;margin: auto 0; }
+/**特定格式**/
+.road{height: 80rpx;}/**地址设置**/
+.date{margin:30rpx 30rpx; font-size:40rpx;}/**日期设置**/ 
+.temp{margin:30rpx 30rpx;font-size: 80rpx;}/**今日温度设置**/
+/**容器布局**/
+.container {
+position: absolute;/**绝对布局**/ left: 0;
+top: 0;
+width: 100%;
+padding: 0;/**内边距**/
+margin: 0;/**外边距**/
+height: 700rpx;
+display: block; /**块级元素**/
+}
+.hor{display: flex;}
+.nowWeather{padding: 60rpx;} 
+.weahterDetail{
+ margin: 0;
+width: 100%;
+display: flex;
+flex-direction: row;/**主轴为横轴，项目左右排列**/
+justify-content: space-around;/**项目在主轴上的对齐方式,项目两侧间隔相等
+**/
+  bottom: 50rpx;
+}
+.forcast{
+  margin: 3%;
+  padding: 3%;
+  border-bottom: 1rpx solid #eee;/**每个项目的间隔线**/
+  justify-content: space-around;/**项目在主轴上的对齐方式,项目两侧间隔相等
+**/
+} 
+.img{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top:2%;
+  margin-left:2%;
+}

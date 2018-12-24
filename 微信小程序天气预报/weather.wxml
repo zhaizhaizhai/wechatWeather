@@ -1,0 +1,45 @@
+<!--weather.wxml-->
+<view class="container"><!--整体布局-->
+<!--今日天气-->
+<view class="nowWeather">
+<view class="city w b center">{{city}} {{district}} {{street}}</view> 
+<view class="date w b center">{{curdate}}</view> 
+<view class="temp w b center">{{curtmp}}</view> 
+<view class = "center">
+<text class = "f50 w b right">{{weather}} </text> 
+<image class="img" src="{{pic1}}"></image> 
+<image class="img" src="{{pic2}}"></image>
+    </view>
+  </view>
+<!--今日详细天气-->
+<view class="weahterDetail">
+<view class="">
+<view class="w center">今日天气</view>
+<view class="w b center f40">{{tmp}}</view> 
+</view>
+<view class="l"></view> 
+<view class="">
+<view class="w center">风向</view>
+<view class="w b center f40">{{wind}}</view>
+ </view>
+<view class="l"></view> 
+<view class="">
+<view class="w center">PM2.5</view>
+<view class="w b center f40">{{pm25}}</view> 
+</view>
+</view> <!--近日天气预报-->
+<view class="w forcast">近日天气预报</view>
+<view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item">
+<view class="hor forcast w">
+<view class="center">{{item.date}}</view> 
+<view class="hor center ">
+<text>{{item.temperature}}{{item.weather}}</text> 
+</view>
+<view class="hor center ">
+<image class="img" src="{{item.dayPictureUrl}}"></image> 
+<text decode='{{true}}'>&nbsp;</text><!--空格字符--> 
+<image class="img" src="{{item.nightPictureUrl}}"></image>
+    </view>
+  </view>
+</view>
+    </view>
